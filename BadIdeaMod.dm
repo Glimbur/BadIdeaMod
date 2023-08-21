@@ -1,7 +1,7 @@
 #modname "Bad Idea Mod"
 #description "This is a collection of bad ideas, strung together into a mod. Pantokrator help you if you try to run it."
 #icon "BadIdeaMod.tga"
-#version 0.02
+#version 0.03
 -- Thanks to AetherNomad for Rebirth mod which I shamelessly copied from. Thanks also to Jon Arbuckle, andy-bell, kurtcop, HPMunchcraft, Darkwolf, and Sturm for aiding and abetting this madness.
 
 #newevent
@@ -5074,5 +5074,62 @@
 #end
 
 -- End undead get death power, animals get growth power
+
+-- Add new Drake types
+
+#newweapon 1300 -- to dodge DE again
+#copyweapon 189
+#name "Mind Control Breath"
+#range -2 -- half str
+#ammo 5 -- average drake value
+#armornegating
+#mind
+#beam
+#range050
+#flyspr 10295
+#uwok
+#end
+
+#newmonster 7000 -- after DE ends
+#copystats 522 -- Cave Drake
+#copyspr 522
+#name "Mind Drake"
+#prot 8
+#mr 14
+#clearmagic
+#clearweapons
+--#add mind control beam
+#weapon 1300
+#weapon "Bite"
+#end
+
+#selectspell 752 -- Fire Drake
+#nreff 501
+#end
+
+#selectspell 758 -- Ice Drake
+#nreff 501
+#end
+
+#selectspell 760 -- Cave Drake
+#nreff 501
+#end
+
+#selectspell 767 -- Swamp Drake
+#nreff 501
+#path 1 6 -- Pure Nature
+#end
+
+#newspell 2954 -- Summon Mind Drake
+#copyspell 758
+#name "Summon Mind Drake"
+#path 0 4 -- Astral path
+#damage 7000 -- Mind  Drake
+#descr "Using powdered astral pearls as bait, the caster calls forth Mind Drakes. Mind Drakes breathe mental domination. More powerful casters summon more drakes."
+#end
+
+
+
+-- End new Drake types
 
 #end
