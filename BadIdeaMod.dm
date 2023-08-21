@@ -5090,17 +5090,107 @@
 #uwok
 #end
 
+#newweapon 1301
+#copyweapon 696 -- Petrifying Gas
+#name "Stone Breath"
+#range -2
+#end
+
+#newweapon 1302
+#copyweapon 114 -- Chain Lightning
+#name "Lightning Breath"
+#range -2 -- Half Str
+#ammo 5
+#beam
+#range050
+#flyspr 10307 -- Lightning
+#end
+
+#newweapon 1303
+#copyweapon 690 -- Dusk Dagger Bleed
+#name "Flensing Breath"
+#range -2
+#ammo 5
+#beam
+#range050
+#flyspr 10287
+#secondaryeffectalways 367 -- Horror Mark
+#end
+
+#newweapon 1304
+#copyweapon 396 -- Leeching Darkness
+#name "Breath of Death"
+#aoe 1
+#ammo 5
+#range -2
+#range050
+#damage 0
+#halfstr
+#secondaryeffect 414 -- MRN Disease
+#end
+
 #newmonster 7000 -- after DE ends
 #copystats 522 -- Cave Drake
 #copyspr 522
 #name "Mind Drake"
 #prot 8
 #mr 14
+#str 14
 #clearmagic
 #clearweapons
---#add mind control beam
 #weapon 1300
 #weapon "Bite"
+#descr "This drake breathes mental domination. If that gives you a headache, it is starting to work."
+#end
+
+#newmonster 7001 -- after DE ends
+#copystats 522 -- Cave Drake
+#copyspr 522
+#name "Shock Drake"
+#prot 8
+#shockres 20
+#str 17
+#clearmagic
+#clearweapons
+#weapon 1300
+#weapon "Bite"
+#descr "This drake breathes lightning. Friendly fire is guaranteed."
+#end
+
+#newmonster 7002 -- Blood Drake
+#copystats 522 -- Cave Drake
+#copyspr 522
+#name "Blood Drake"
+#prot 8
+#regeneration 10
+#clearweapons
+#clearmagic
+#weapon 1303
+#weapon "Bite"
+#descr "A normal lizard has been grown to enormous size with twisted blood magic, and its affinity for breath weapons turned to flensing."
+#end
+
+#newmonster 7003 -- Death Drake
+#copystats 522 -- Cave Drake
+#copyspr 522
+#name "Death Drake"
+#prot 0
+#pierceres
+#str 14
+#undead
+#poisonres 25
+#coldres 15
+#deathpower 1
+#clearweapons
+#clearmagic
+#weapon 1304
+#weapon "Bite"
+#descr "The corpse of a drake has been raised from the dead. It now breathes concentrated unlife."
+#end
+
+#selectmonster 522 -- Cave Drake
+#stonebeing
+#weapon 1301 -- Stone Breath
 #end
 
 #selectspell 752 -- Fire Drake
@@ -5128,7 +5218,31 @@
 #descr "Using powdered astral pearls as bait, the caster calls forth Mind Drakes. Mind Drakes breathe mental domination. More powerful casters summon more drakes."
 #end
 
+#newspell 2955 -- Summon Shock Drake
+#copyspell 758
+#name "Summon Shock Drake"
+#path 0 1 -- Air path
+#damage 7001 -- Shock Drake
+#descr "Using air magic, the caster calls down a few Shock Drakes from the mountain peaks."
+#end
 
+#newspell 2956 -- Summon Blood Drake
+#copyspell 758
+#name "Summon Blood Drake"
+#path 0 7 -- Blood path
+#damage 7002 -- Blood Drake
+#fatiguecost 10000
+#school 6 -- Blood
+#descr "Using blood magic, a normal lizard is grown to tremendous size and outfitted with a flensing breath."
+#end
+
+#newspell 2957 -- Summon Death Drake
+#copyspell 758
+#name "Summon Death Drake"
+#path 0 5 -- Death path
+#damage 7003 -- Death Drake
+#descr "On a moonless night, the caster raises Death Drakes to afflict the living."
+#end
 
 -- End new Drake types
 
