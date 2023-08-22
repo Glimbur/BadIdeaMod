@@ -2536,42 +2536,7 @@
 #aoe 10004
 #end
 -- End new AoE control the dead and twist fate
--- -- Wolf unnecessary buff into elemental forms
--- #selectmonster 411
--- #montag 4010
--- #end
--- #selectmonster 412
--- #montag 4010
--- #end
--- #selectmonster 496
--- #montag 4010
--- #end
--- #selectmonster 497
--- #montag 4010
--- #end
--- #selectmonster 570
--- #montag 4010
--- #end
--- #selectmonster 571
--- #montag 4010
--- #end
--- #selectmonster 597
--- #montag 4010
--- #end
--- #selectmonster 598
--- #montag 4010
--- #end
--- #selectmonster 834
--- #montag 4010
--- #end
--- #selectmonster 835
--- #montag 4010
--- #end
 
--- #selectmonster 284 -- wolf
--- #secondtmpshape -4010
--- #end
--- End unnecessary wolf buff
 -- Hoof buff
 #selectweapon 19
 #dmg 5
@@ -5088,12 +5053,14 @@
 #range050
 #flyspr 10295
 #uwok
+#natural
 #end
 
 #newweapon 1301
 #copyweapon 696 -- Petrifying Gas
 #name "Stone Breath"
 #range -2
+#natural
 #end
 
 #newweapon 1302
@@ -5104,6 +5071,7 @@
 #beam
 #range050
 #flyspr 10307 -- Lightning
+#natural
 #end
 
 #newweapon 1303
@@ -5115,6 +5083,7 @@
 #range050
 #flyspr 10287
 #secondaryeffectalways 367 -- Horror Mark
+#natural
 #end
 
 #newweapon 1304
@@ -5124,9 +5093,10 @@
 #ammo 5
 #range -2
 #range050
-#damage 0
+#dmg 0
 #halfstr
 #secondaryeffect 414 -- MRN Disease
+#natural
 #end
 
 #newmonster 7000 -- after DE ends
@@ -5245,5 +5215,111 @@
 #end
 
 -- End new Drake types
+
+-- Sticks and Stones Buff
+#selectweapon 360
+-- todo find the command for more likely to hit head
+#end
+
+-- Massive Poison Buff
+#selectweapon 657 -- Jellyberd
+#damage 35
+#end
+
+#selectweapon 425 -- Poison Spit
+#damage 35
+#end
+
+#selectweapon 654 -- Anemone
+#damage 35
+#end
+
+#selectweapon 224 -- Poison Spit Again
+#damage 35
+#end
+
+#selectweapon 141 -- Yet another poison spit
+#damage 35
+#end
+
+#selectweapon 342 -- Poison Ink
+#damage 35
+#end
+
+#selectweapon 147 -- Spray Poison
+#damage 35
+#end
+
+#selectweapon 54 -- Paralyzing Poison
+#copyweapon 52 -- Death Poison
+#end
+
+#selectweapon 50 -- Weak Poison
+#copyweapon 52 -- Death Poison
+#end
+
+#selectweapon 51 -- Strong Poison
+#copyweapon 52 -- Death Poison
+#end
+
+#selectweapon 53 -- Debilitative Poison
+#copyweapon 52 -- Death Poison
+#end
+
+-- End unnecessary poison buff
+
+-- Gator Roll
+#newweapon 1305
+#name "Gator Roll"
+#nostr
+#len 0
+#dt_stun
+#armornegating
+#att 0
+#def 0
+#dmg 30
+#end
+
+#selectmonster 2185 -- Crocodile
+#weapon 1305
+#end
+
+-- End Gator Roll
+
+-- MA Ermor Buffs
+
+#newevent
+#rarity 5
+#req_fornation 44 -- MA Ermor
+#req_pop0ok
+#msg "The entropy of destroying a castle has been converted into death gems."
+#req_targorder 44
+#4d6vis 5 -- 4d6 death gems
+#end
+
+#newevent
+#rarity 5
+#req_fornation 44 -- MA Ermor
+#req_pop0ok
+#msg "The entropy of destroying a lab has been converted into death gems."
+#req_targorder 45
+#4d6vis 5 -- 4d6 death gems
+#end
+
+-- end MA Ermor Buffs
+
+-- Air Elementals lose Trample, gain a buffet attack
+#selectmonster	567
+	#end
+#selectmonster	568
+	#end
+#selectmonster	569
+	#end
+#selectmonster	570
+	#end
+#selectmonster	571
+	#end
+#selectmonster	572
+	#end
 
 #end
