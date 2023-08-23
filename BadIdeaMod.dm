@@ -5284,6 +5284,10 @@
 #weapon 1305
 #end
 
+#selectmonster 2186 -- Sacred Crocodile
+#weapon 1305
+#end
+
 -- End Gator Roll
 
 -- MA Ermor Buffs
@@ -5309,17 +5313,134 @@
 -- end MA Ermor Buffs
 
 -- Air Elementals lose Trample, gain a buffet attack
+
+#newweapon 1306
+#name "Smash"
+#dmg 0
+#att 0
+#def 0
+#len 0
+#nratt 1
+#dt_small
+#bonus
+#flail
+#end
 #selectmonster	567
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
+#weapon 1306
 	#end
 #selectmonster	568
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
+#weapon 1306
 	#end
 #selectmonster	569
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
+#weapon 1306
 	#end
 #selectmonster	570
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
 	#end
 #selectmonster	571
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
 	#end
 #selectmonster	572
+#clearspec
+#magicbeing
+#ethereal
+#neednoteat
+#inanimate
+#flying
+#stormimmune
+#magicbeing
+#mind
+#spiritsight
+#blind
+#stormpower 2
+#poisonres 25
+#shockres 15
+#unsurr 5
+#woundfend 99
+#weapon 1306
 	#end
 
 #end
