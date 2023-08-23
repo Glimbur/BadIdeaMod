@@ -1,6 +1,6 @@
 #modname "Bad Idea Mod"
 #description "This is a collection of bad ideas, strung together into a mod. Pantokrator help you if you try to run it."
-#icon "BadIdeaMod.tga"
+#icon "./BadIdeaMod/BadIdeaMod.tga"
 #version 0.03
 -- Thanks to AetherNomad for Rebirth mod which I shamelessly copied from. Thanks also to Jon Arbuckle, andy-bell, kurtcop, HPMunchcraft, Darkwolf, and Sturm for aiding and abetting this madness.
 
@@ -5057,10 +5057,15 @@
 #end
 
 #newweapon 1301
-#copyweapon 696 -- Petrifying Gas
 #name "Stone Breath"
 #range -2
 #natural
+#ammo 5
+#dt_aff
+#damage 32
+#magic
+#hardmrneg
+#beam
 #end
 
 #newweapon 1302
@@ -5087,9 +5092,7 @@
 #end
 
 #newweapon 1304
-#copyweapon 396 -- Leeching Darkness
 #name "Breath of Death"
-#aoe 1
 #ammo 5
 #range -2
 #range050
@@ -5097,11 +5100,15 @@
 #halfstr
 #secondaryeffect 414 -- MRN Disease
 #natural
+#beam
+#armornegating
+#mrnegates
 #end
 
 #newmonster 7000 -- after DE ends
 #copystats 522 -- Cave Drake
-#copyspr 522
+#spr1 "./BadIdeaMod/MindDrake1.tga"
+#spr2 "./BadIdeaMod/MindDrake2.tga"
 #name "Mind Drake"
 #prot 8
 #mr 14
@@ -5115,21 +5122,24 @@
 
 #newmonster 7001 -- after DE ends
 #copystats 522 -- Cave Drake
-#copyspr 522
+#spr1 "./BadIdeaMod/ShockDrake1.tga"
+#spr2 "./BadIdeaMod/ShockDrake2.tga"
 #name "Shock Drake"
 #prot 8
 #shockres 20
 #str 17
+#overcharged 2
 #clearmagic
 #clearweapons
-#weapon 1300
+#weapon 1302
 #weapon "Bite"
 #descr "This drake breathes lightning. Friendly fire is guaranteed."
 #end
 
 #newmonster 7002 -- Blood Drake
 #copystats 522 -- Cave Drake
-#copyspr 522
+#spr1 "./BadIdeaMod/BloodDrake1.tga"
+#spr2 "./BadIdeaMod/BloodDrake2.tga"
 #name "Blood Drake"
 #prot 8
 #regeneration 10
@@ -5142,7 +5152,8 @@
 
 #newmonster 7003 -- Death Drake
 #copystats 522 -- Cave Drake
-#copyspr 522
+#spr1 "./BadIdeaMod/DeathDrake1.tga"
+#spr2 "./BadIdeaMod/DeathDrake2.tga"
 #name "Death Drake"
 #prot 0
 #pierceres
@@ -5159,8 +5170,8 @@
 #end
 
 #selectmonster 522 -- Cave Drake
-#stonebeing
 #weapon 1301 -- Stone Breath
+#slashres
 #end
 
 #selectspell 752 -- Fire Drake
@@ -5442,5 +5453,32 @@
 #woundfend 99
 #weapon 1306
 	#end
+	
+	-- end Air Elemental Trample Removal
+	
+-- Test drakes
+
+#newevent
+#rarity 5
+#req_capital 1
+#nation -2
+#msg "Drakes!"
+#3d6units 522
+#3d6units 523
+#3d6units 579
+#3d6units 2196
+#end
+
+#newevent
+#rarity 5
+#req_capital 1
+#nation -2
+#rarity 5
+#msg "More Drakes!"
+#3d6units 7000
+#3d6units 7001
+#3d6units 7002
+#3d6units 7003
+#end
 
 #end
