@@ -5455,30 +5455,6 @@
 	#end
 	
 	-- end Air Elemental Trample Removal
-	
--- Test drakes
 
-#newevent
-#rarity 5
-#req_capital 1
-#nation -2
-#msg "Drakes!"
-#3d6units 522
-#3d6units 523
-#3d6units 579
-#3d6units 2196
-#end
-
-#newevent
-#rarity 5
-#req_capital 1
-#nation -2
-#rarity 5
-#msg "More Drakes!"
-#3d6units 7000
-#3d6units 7001
-#3d6units 7002
-#3d6units 7003
-#end
 
 #end
