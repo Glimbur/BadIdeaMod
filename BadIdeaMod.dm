@@ -1,7 +1,7 @@
 #modname "Bad Idea Mod"
 #description "This is a collection of bad ideas, strung together into a mod. Pantokrator help you if you try to run it."
 #icon "./BadIdeaMod/BadIdeaMod.tga"
-#version 0.03
+#version 0.04
 -- Thanks to AetherNomad for Rebirth mod which I shamelessly copied from. Thanks also to Jon Arbuckle, andy-bell, kurtcop, HPMunchcraft, Darkwolf, and Sturm for aiding and abetting this madness.
 
 #newevent
@@ -5212,7 +5212,7 @@
 #name "Summon Blood Drake"
 #path 0 7 -- Blood path
 #damage 7002 -- Blood Drake
-#fatiguecost 10000
+#fatiguecost 1000
 #school 6 -- Blood
 #descr "Using blood magic, a normal lizard is grown to tremendous size and outfitted with a flensing breath."
 #end
@@ -5289,6 +5289,7 @@
 #att 0
 #def 0
 #dmg 30
+#sizeresist
 #end
 
 #selectmonster 2185 -- Crocodile
